@@ -777,7 +777,7 @@ public class MENU extends javax.swing.JFrame {
         if(jt_Astronautas.getSelectedRow()>=0){
             // eliminar
             Astroboy tp = new Astroboy();           
-            Astro.remove(Id);
+            Astro.remove(jt_Astronautas.getSelectedRow());
             tp.WriteFileMod(Astro);
             this.Id = -1;            
             recargarTablaA(jt_Astronautas);

@@ -35,8 +35,8 @@ public class Astroboy implements Serializable {
      
     public Astroboy() {
         try {
-            Archivo = new File(new File(".").getCanonicalPath() + "\\src\\Files\\" + "astronautas.txt");
-        } catch (IOException ex) {
+            Archivo = new File("astronautas.txt");
+        } catch (Exception ex) {
             Logger.getLogger(Astroboy.class.getName()).log(Level.SEVERE, null, ex);
         }
 
@@ -52,8 +52,9 @@ public class Astroboy implements Serializable {
         this.Peso = Peso;
         this.Misiones = Misiones;
          try {
-            Archivo = new File(new File(".").getCanonicalPath() + "\\src\\Files\\" + "astronautas.txt");
-        } catch (IOException ex) {
+            Archivo = new File(
+                    "astronautas.txt");
+        } catch (Exception ex) {
             Logger.getLogger(Astroboy.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
